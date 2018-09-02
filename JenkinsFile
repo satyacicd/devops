@@ -30,13 +30,13 @@ node {
       }
    }
    stage('Deploy') {
-       sh 'curl -u admin:redhat@123 -T target/**.war "http://54.173.64.210:8080/manager/text/deploy?path=/devops&update=true"'
+       sh 'curl -u admin:redhat@123 -T target/**.war "http://52.23.235.27:8080/manager/text/deploy?path=/devops&update=true"'
    }
    stage("Smoke Test"){
-       sh "curl --retry-delay 10 --retry 5 http://54.173.64.210:8080/devops"
+       sh "curl --retry-delay 10 --retry 5 http://52.23.235.27:8080/devops"
    } 
    stage('Artifacts') {
-      if (isUnix()) {
+      if (isUnix()) {52.23.235.27
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean deploy"
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean deploy/)
