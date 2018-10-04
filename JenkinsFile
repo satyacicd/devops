@@ -30,10 +30,10 @@ node {
       }
    }
    stage('Deploy') {
-       sh 'curl -u admin:redhat@123 -T target/**.war "http://ec2-18-234-140-219.compute-1.amazonaws.com:7080/manager/text/deploy?path=/devops&update=true"'
+       sh 'curl -u admin:redhat@123 -T target/**.war "http://ec2-34-238-119-255.compute-1.amazonaws.com:7080/manager/text/deploy?path=/devops&update=true"'
    }
    stage("Smoke Test"){
-       sh "curl --retry-delay 10 --retry 5 http://ec2-18-234-140-219.compute-1.amazonaws.com:7080/devops"
+       sh "curl --retry-delay 10 --retry 5 http://ec2-34-238-119-255.compute-1.amazonaws.com:7080/devops"
    } 
    stage('Artifacts') {
       if (isUnix()) {52.23.235.27
