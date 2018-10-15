@@ -1,12 +1,10 @@
-//pipeline{
-  // agent any
-  node {
-   def mvnHome
-   stage('Prepare') {
+pipeline{
+   agent any   
+     stage('Prepare') {
       //git url: 'git@github.com:satyacicd/devops.git', branch: 'master'
       mvnHome = tool 'maven'
-   }
-stage('Build') {
+		}
+	stage('Build') {
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } else {
@@ -26,5 +24,5 @@ stage('Build') {
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean deploy/)
       }
-   }     
+   }  
 }
