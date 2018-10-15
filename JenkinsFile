@@ -26,15 +26,5 @@ stage('Build') {
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean deploy/)
       }
-   }
-  stage('Deploy') {
-      if (isUnix()) {
-		   echo "deploying war from http://localhost:8071/artifactory/libs-snapshot-local/com/example/devops/1.0.1-SNAPSHOT/devops-1.0.1-20181013.182353-40.war"
-		   sh 'curl -u admin:redhat@123 -T *.war "http://localhost:8090/manager/text/deploy?path=/devops&update=true"'
-      }else{
-      //bat('curl -O "http://localhost:8071/artifactory/libs-snapshot-local/com/example/devops/1.0.1-SNAPSHOT/devops-1.0.1-20181013.182353-40.war"')
-		bat('"curl -u admin:redhat@123 -T *.war "http://localhost:8090/manager/text/deploy?path=/devops&update=true""')
-      }
-   }
-   
-//}
+   }     
+}
