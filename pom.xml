@@ -103,7 +103,7 @@
 			  <artifactId>maven-surefire-plugin</artifactId>
 			  <version>${surefire.version}</version><!--$NO-MVN-MAN-VER$-->
 			</plugin>
-			<plugin>
+			<!--<plugin>
                           <groupId>org.codehaus.cargo</groupId>
                           <artifactId>cargo-maven2-plugin</artifactId>
                           <version>1.4.8</version>
@@ -121,7 +121,7 @@
                         </properties>
                         </configuration>
 		        </configuration> 
-                      </plugin>
+                      </plugin>-->
 			<plugin>
 			    <groupId>org.jacoco</groupId>
 			    <artifactId>jacoco-maven-plugin</artifactId>
