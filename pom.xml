@@ -104,6 +104,25 @@
 			  <version>${surefire.version}</version><!--$NO-MVN-MAN-VER$-->
 			</plugin>
 			<plugin>
+                          <groupId>org.codehaus.cargo</groupId>
+                          <artifactId>cargo-maven2-plugin</artifactId>
+                          <version>1.4.8</version>
+                         <configuration>
+                          <container>
+                          <containerId>tomcat8x</containerId>
+                          <type>remote</type>
+                         </container>
+                        <configuration>
+                        <type>runtime</type>
+                        <properties>
+                         <cargo.remote.username>satyatomcat</cargo.remote.username>
+                         <cargo.remote.password>redhat@123</cargo.remote.password>
+                         <cargo.tomcat.manager.url>http://localhost:7090/manager/text</cargo.tomcat.manager.url>
+                        </properties>
+                        </configuration>
+		        </configuration> 
+                      </plugin>
+			<plugin>
 			    <groupId>org.jacoco</groupId>
 			    <artifactId>jacoco-maven-plugin</artifactId>
 			    <version>${jacoco.version}</version>
