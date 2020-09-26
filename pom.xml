@@ -4,7 +4,7 @@
 <!--webhook changes testing to push into the repo   -->
 	<groupId>com.example</groupId>
 	<artifactId>devops</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
+	<version>1.1.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>devops</name>
@@ -29,12 +29,12 @@
 		<repository>
 			<id>central</id>
 			<name>releases</name>
-			<url>http://localhost:7081/artifactory/libs-release-demo</url>
+			<url>http://10.7.157.204:8081/artifactory/libs-release-local</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshot</id>
 			<name>snapshots</name>
-			<url>http://localhost:7081/artifactory/libs-snapshot-demo</url>
+			<url>http://10.7.157.204:8081/artifactory/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
 
