@@ -32,7 +32,7 @@
 			<url>http://10.7.157.204:8081/artifactory/libs-release-local/</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshot</id>
+			<id>snapshots</id>
 			<name>snapshots</name>
 			<url>http://10.7.157.204:8081/artifactory/libs-snapshot-local/</url>
 		</snapshotRepository>
